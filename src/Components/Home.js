@@ -4,7 +4,11 @@ function Home() {
   return (
     <div className='main-content'>
         <section className="home section">
-            Home
+            <div className="container">
+              <div className="row">
+                
+              </div>
+            </div>
         </section>      
     </div>
   )
