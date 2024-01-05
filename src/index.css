@@ -37,6 +37,7 @@ section{
   right: 0;
   z-index: 0;
   opacity: 1;
+  padding: 0 30px;
 }
 .aside{
   min-height: 100%;
