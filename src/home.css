@@ -26,7 +26,7 @@
 .btn{
     font-weight: 500;
     padding: 12px 35px;
-    background-color: var(--skin-clor);
+    background-color: var(--skin-color);
     color: white;
     border-radius: 40px;
     display: inline-block;
@@ -45,15 +45,18 @@
     position: relative;
 }
 .home .home-img img{
+    margin:auto;
     height: 400px;
+    border-radius: 5px;
 }
+
 .home-img::after{
     content: '';
     position: absolute;
     height: 80px;
     width: 80px;
-    border-bottom: 10px solid var(--skin-clor);
-    border-right: 10px solid var(--skin-clor);
+    border-bottom: 10px solid var(--skin-color);
+    border-right: 10px solid var(--skin-color);
     right: 20px;
     bottom: -40px;
 }
@@ -62,8 +65,8 @@
     position: absolute;
     height: 80px;
     width: 80px;
-    border-top: 10px solid var(--skin-clor);
-    border-left: 10px solid var(--skin-clor);
+    border-top: 10px solid var(--skin-color);
+    border-left: 10px solid var(--skin-color);
     left: -20px;
     top: -40px;
 }
@@ -77,14 +80,14 @@ h3.hello span{
     font-family: 'Dancing Script', cursive;
     font-size: 30px;
     font-weight: 700;
-    color: var(--skin-clor);
+    color: var(--skin-color);
 }
 h3.my-profession{
     font-size: 30px;
     margin: 15px 0;
 }
 .typing{
-    color: var(--skin-clor);
+    color: var(--skin-color);
 }
 .home .home-info p{
     margin-bottom: 70px;

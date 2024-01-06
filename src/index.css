@@ -31,14 +31,15 @@ section{
   background-color: var(--bg-black-900);
   min-height: 100vh;
   display: block;
-  position: fixed;
-  left: 270px;
-  top: 0;
-  right: 0;
-  z-index: 0;
   opacity: 1;
   padding: 0 30px;
 }
+
+.main-content{
+  padding-left: 270px;
+}
+
+
 .aside{
   min-height: 100%;
   padding: 30px;
@@ -76,8 +77,8 @@ section{
   position: absolute;
   width: 20px;
   height: 20px;
-  border-bottom: 5px solid var(--skin-clor);
-  border-left: 5px solid var(--skin-clor);
+  border-bottom: 5px solid var(--skin-color);
+  border-left: 5px solid var(--skin-color);
   bottom: 0;
   left: 0;
 }
@@ -86,8 +87,8 @@ section{
   position: absolute;
   width: 20px;
   height: 20px;
-  border-top: 5px solid var(--skin-clor);
-  border-right: 5px solid var(--skin-clor);
+  border-top: 5px solid var(--skin-color);
+  border-right: 5px solid var(--skin-color);
   top: 0;
   right: 0;
 }
@@ -108,7 +109,7 @@ section{
 .aside .nav-toggler span{
   height: 2px;
   width: 18px;
-  background: var(--skin-clor);
+  background: var(--skin-color);
   display: inline-block;
   position: relative;
 }
@@ -116,7 +117,7 @@ section{
   content: '';
   height: 2px;
   width: 18px;
-  background: var(--skin-clor);
+  background: var(--skin-color);
   position: absolute;
   top: -6px;
   left: 0;
@@ -125,7 +126,7 @@ section{
   content: '';
   height: 2px;
   width: 18px;
-  background: var(--skin-clor);
+  background: var(--skin-color);
   position: absolute;
   top: 6px;
   left: 0;
@@ -150,7 +151,7 @@ section{
   
 }
 .aside .nav li a.active{
-  color: var(--skin-clor);
+  color: var(--skin-color);
 }
 .aside .nav li a i{
   margin-right: 15px;
