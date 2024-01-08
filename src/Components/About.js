@@ -94,6 +94,31 @@ function About() {
 
                 <div className="experience pad-15">
                     <h3 className="title">Experience</h3>
+                    <div className="row">
+                        <div className="timeline-box pad-15">
+                            <div className="timeline shadow-dark">
+                                <Timeline
+                                    key={1}
+                                    date={'2013-2015'}
+                                    level={'Master in Computer Science'}
+                                    descr={'Lorem ipsum dolor sit amet consectetur adipisicing elit.'}
+                                />
+                                <Timeline
+                                    key={2}
+                                    date={'2018-2020'}
+                                    level={'Master in Computer Science'}
+                                    descr={'Lorem ipsum dolor sit amet consectetur adipisicing elit.'}
+                                />
+                                <Timeline
+                                    key={3}
+                                    date={'2020-2021'}
+                                    level={'Master in Computer Science'}
+                                    descr={'Lorem ipsum dolor sit amet consectetur adipisicing elit.'}
+                                />
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
 

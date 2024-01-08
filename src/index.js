@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import "./color-1.css"
 import "./home.css"
 import "./about.css"
+import "./services.css"
 
 import { BrowserRouter } from 'react-router-dom';
 
