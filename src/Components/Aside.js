@@ -8,7 +8,7 @@ function Aside() {
   return (
     <div className='aside'>
       <div className="logo">
-        <a href="#"><span>A</span>tlas</a>
+        <a href="#"><span>M</span>agen</a>
       </div>
       <div className="nav-toggler">
         <span></span>

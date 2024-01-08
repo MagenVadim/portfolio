@@ -157,3 +157,6 @@ section{
   margin-right: 15px;
 }
 
+.shadow-dark{
+  box-shadow: 0 0 20px rgba(48, 46, 77, .15);
+}
