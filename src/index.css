@@ -160,3 +160,19 @@ section{
 .shadow-dark{
   box-shadow: 0 0 20px rgba(48, 46, 77, .15);
 }
+
+@media (max-width:1200px){
+  .aside{
+      left: -270px;
+  }
+  .main-content{
+      padding-left: 0;
+  }
+  .about .about-content .personal-info .info-item p span{
+    display: block;
+    margin-left: 0;
+  }
+}
+@media (max-width:990px){
+  
+}
