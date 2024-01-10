@@ -18,7 +18,7 @@ function Aside() {
             <li><a href="#" onClick={()=>{navigate('/about')}}><i className="fa fa-user"></i>About</a></li>
             <li><a href="#" onClick={()=>{navigate('/services')}}><i className="fa fa-list"></i>Services</a></li>
             <li><a href="#" onClick={()=>{navigate('/portfolio')}}><i className="fa fa-briefcase"></i>Portfolio</a></li>
-            <li><a href="#"><i className="fa fa-comments"></i>Contact</a></li>
+            <li><a href="#" onClick={()=>{navigate('/contact')}}><i className="fa fa-comments"></i>Contact</a></li>
         </ul>
     </div>
   )

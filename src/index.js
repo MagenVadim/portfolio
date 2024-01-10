@@ -8,6 +8,7 @@ import "./home.css"
 import "./about.css"
 import "./services.css"
 import "./portfolio.css"
+import "./contact.css"
 
 import { BrowserRouter } from 'react-router-dom';
 
