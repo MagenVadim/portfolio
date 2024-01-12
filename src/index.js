@@ -9,6 +9,7 @@ import "./about.css"
 import "./services.css"
 import "./portfolio.css"
 import "./contact.css"
+import "./style-switcher.css"
 
 import { BrowserRouter } from 'react-router-dom';
 
