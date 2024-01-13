@@ -6,6 +6,7 @@
  --bg-black-50: #e8dfec;
  --text-black-900: #302e4d;
  --text-black-700: #504e70;
+ --skin-color: #ec6918;
 }
 body{
   line-height: 1.5;
@@ -72,26 +73,7 @@ section{
   font-family: 'Dancing Script', cursive;
   font-size: 40px;
 }
-.aside .logo a::before{
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-bottom: 5px solid var(--skin-color);
-  border-left: 5px solid var(--skin-color);
-  bottom: 0;
-  left: 0;
-}
-.aside .logo a::after{
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-top: 5px solid var(--skin-color);
-  border-right: 5px solid var(--skin-color);
-  top: 0;
-  right: 0;
-}
+
 .aside .nav-toggler{
   height: 40px;
   width: 45px;

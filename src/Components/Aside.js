@@ -1,14 +1,38 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
 
-function Aside() {
+function Aside({skin}) {
 
   const navigate = useNavigate();
 
+  const Logo = styled.a`
+    &:before{
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-bottom: 5px solid ${skin};
+      border-left: 5px solid ${skin};
+      bottom: 0;
+      left: 0;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-top: 5px solid ${skin};
+      border-right: 5px solid ${skin};
+      top: 0;
+      right: 0;
+    }
+  `
+
   return (
-    <div className='aside'>
+    <div className="aside">
       <div className="logo">
-        <a href="#"><span>M</span>agen</a>
+        <Logo href="#"><span>M</span>agen</Logo>
       </div>
       <div className="nav-toggler">
         <span></span>

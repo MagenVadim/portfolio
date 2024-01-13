@@ -59,19 +59,20 @@
     height: 30px;
     width: 30px;
     border-radius: 50%;
+    cursor: pointer;
 }
-.style-switcher .color-1{
+.style-switcher .color_1{
     background-color: #ec6918;
 }
-.style-switcher .color-2{
+.style-switcher .color_2{
     background-color: #5e2003;
 }
-.style-switcher .color-3{
+.style-switcher .color_3{
     background-color: #37b182;
 }
-.style-switcher .color-4{
+.style-switcher .color_4{
     background-color: #1854b4;
 }
-.style-switcher .color-5{
+.style-switcher .color_5{
     background-color: #f021b2;
 }
