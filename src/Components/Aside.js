@@ -30,16 +30,16 @@ const NavActive = styled.a`
   display: block;
   border-bottom: 1px solid #e8dfec;  
   padding: 5px 15px;
-  color: ${(props)=> props.colorStatus}         
+  color: ${(props)=> props.colorStatus ? props.color : '#302e4d'}         
 `
 
 
 let collectionAsideItems = [
-  {id:"Home", color:true},
-  {id:"About", color:false},
-  {id:"Services", color:false},
-  {id:"Portfolio", color:false},
-  {id:"Contact", color:false},
+  {id:"Home", status:true},
+  {id:"About", status:false},
+  {id:"Services", status:false},
+  {id:"Portfolio", status:false},
+  {id:"Contact", status:false},
 ]
 
 
@@ -56,11 +56,11 @@ function Aside({skin}) {
       const container={}     
       if(elem.id===value){
         container['id']=elem.id;
-        container['color']=true; 
+        container['status']=true; 
         return container; 
       } else {
         container['id']=elem.id;
-        container['color']=false;
+        container['status']=false;
         return container; 
       }     
     })  
@@ -68,13 +68,11 @@ function Aside({skin}) {
   }
 
   const colorStatus = (id)=>{
-    return id
-    // asideItems.forEach((elem)=>{
-    //   if(elem.id===id){
-    //     console.log("id: " + id + " - status: " + elem.color)
-    //     return elem.color        
-    //   }
-    // })
+    let status = false;
+    asideItems.forEach((elem)=>{      
+      if(elem.id===id){status = elem.status}
+    })
+    return status
   }
 
   return (
@@ -86,11 +84,11 @@ function Aside({skin}) {
         <span></span>
       </div>
       <ul className="nav">
-            <li><NavActive colorStatus={colorStatus("blue")} color={skin} href="#" onClick={()=>{navigate('/'); asideItemClick("Home")}}><i className="fa fa-home"></i>Home</NavActive></li>
-            <li><NavActive colorStatus={colorStatus("About")} href="#" onClick={()=>{navigate('/about'); asideItemClick("About")}}><i className="fa fa-user"></i>About</NavActive></li>
-            <li><NavActive colorStatus={colorStatus("Services")} href="#" onClick={()=>{navigate('/services'); asideItemClick("Services")}}><i className="fa fa-list"></i>Services</NavActive></li>
-            <li><NavActive colorStatus={colorStatus("Portfolio")} href="#" onClick={()=>{navigate('/portfolio'); asideItemClick("Portfolio")}}><i className="fa fa-briefcase"></i>Portfolio</NavActive></li>
-            <li><NavActive colorStatus={colorStatus("Contact")} href="#" onClick={()=>{navigate('/contact'); asideItemClick("Contact")}}><i className="fa fa-comments"></i>Contact</NavActive></li>
+            <li><NavActive colorStatus={colorStatus("Home")} color={skin} href="#" onClick={()=>{navigate('/'); asideItemClick("Home")}}><i className="fa fa-home"></i>Home</NavActive></li>
+            <li><NavActive colorStatus={colorStatus("About")} color={skin} href="#" onClick={()=>{navigate('/about'); asideItemClick("About")}}><i className="fa fa-user"></i>About</NavActive></li>
+            <li><NavActive colorStatus={colorStatus("Services")} color={skin} href="#" onClick={()=>{navigate('/services'); asideItemClick("Services")}}><i className="fa fa-list"></i>Services</NavActive></li>
+            <li><NavActive colorStatus={colorStatus("Portfolio")} color={skin} href="#" onClick={()=>{navigate('/portfolio'); asideItemClick("Portfolio")}}><i className="fa fa-briefcase"></i>Portfolio</NavActive></li>
+            <li><NavActive colorStatus={colorStatus("Contact")} color={skin} href="#" onClick={()=>{navigate('/contact'); asideItemClick("Contact")}}><i className="fa fa-comments"></i>Contact</NavActive></li>
         </ul>
     </div>
   )
