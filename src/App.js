@@ -18,14 +18,6 @@ function App() {
     {model:'color_4', color:"#1854b4"},
     {model:'color_5', color:"#f021b2"}
   ]
-
-  // const styles = {
-  //   color_1 :{"color":"#ec6918"},
-  //   color_2 :{"color":"#5e2003"},
-  //   color_3 :{"color":"#37b182"},
-  //   color_4 :{"color":"#1854b4"},
-  //   color_5 :{"color":"#f021b2"}
-  // }
   
   const[skinColor, setSkinColor] = useState(styles_arr[0].color);
 

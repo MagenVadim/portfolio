@@ -124,7 +124,7 @@ section{
   margin-bottom: 20px;
   display: block;
 }
-.aside .nav li a{
+/* .aside .nav li a{
   font-weight: 600;
   display: block;
   border-bottom: 1px solid var(--bg-black-50);
@@ -134,7 +134,7 @@ section{
 }
 .aside .nav li a.active{
   color: var(--skin-color);
-}
+} */
 .aside .nav li a i{
   margin-right: 15px;
 }

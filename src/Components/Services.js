@@ -14,37 +14,37 @@ function Services() {
 
           <div className="row">
             <ServiceItem
-              key={1}
+              key={"mobile-alt"}
               className={'fa fa-mobile-alt'}
               item={'Web Design'}
               description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}          
             />
             <ServiceItem
-              key={1}
+              key={"palette"}
               className={'fa fa-palette'}
               item={'Web Design'}
               description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}          
             />
             <ServiceItem
-              key={2}
+              key={"laptop-code"}
               className={'fa fa-laptop-code'}
               item={'Web Design'}
               description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}          
             />
             <ServiceItem
-              key={3}
+              key={"code"}
               className={'fa fa-code'}
               item={'Web Design'}
               description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}          
             />
             <ServiceItem
-              key={4}
+              key={"search"}
               className={'fa fa-search'}
               item={'Web Design'}
               description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}          
             />
             <ServiceItem
-              key={5}
+              key={"bullhorn"}
               className={'fa fa-bullhorn'}
               item={'Web Design'}
               description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}          
