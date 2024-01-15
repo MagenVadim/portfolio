@@ -1,43 +1,6 @@
 import React from 'react'
 import hero from '../../images/hero2.jpg'
-import styled from 'styled-components';
-import {Btn, Span, Typing} from '../StylesComponent'
-
-const Frame = styled.div`
-  flex: 0 0 40%;
-  max-width: 40%;
-  text-align: center;
-  position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
-
-&:before{
-  content: '';
-  position: absolute;
-  height: 80px;
-  width: 80px;
-  border-top: 10px solid ${(props)=> props.color};
-  border-left: 10px solid ${(props)=> props.color};
-  left: 20px;
-  top: -50px;
-}
-&:after{
-  content: '';
-  position: absolute;
-  height: 80px;
-  width: 80px;
-  border-bottom: 10px solid ${(props)=> props.color};
-  border-right: 10px solid ${(props)=> props.color};
-  right: 20px;
-  bottom: -40px;
-}
-& img{
-  margin:auto;
-  height: 400px;
-  border-radius: 5px;
-}
-`
-
+import {Frame, Btn, Span, Typing} from '../StylesComponent'
 
 function Home({skin}) {
   return (

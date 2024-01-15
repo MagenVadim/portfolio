@@ -1,7 +1,7 @@
 import React from 'react'
 import ContactItem from './ContactItem'
 import TypeForm from './TypeForm'
-import {HeaderQuestion} from '../StylesComponent'
+import {BtnContact, HeaderQuestion} from '../StylesComponent'
 
 function Contact({skin}) {
   return (
@@ -48,7 +48,7 @@ function Contact({skin}) {
 
                         <div className="row">
                             <div className="form-item col-12 pad-15">
-                                <button type="submit" className='btn'>Send Message</button>
+                                <BtnContact color={skin} type="submit" >Send Message</BtnContact>
                             </div>
                         </div>
                         

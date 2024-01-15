@@ -2,6 +2,7 @@
     min-height: 100vh;
     display: flex;
     color: var(--text-bg-black-900);
+    background-image: url("../../images/wall-background.jpg");    
 }
 .home .home-info{
     flex: 0 0 60%;
@@ -17,20 +18,7 @@
     width: 100%;
     margin: auto;
 }
-/* .btn{
-    font-weight: 500;
-    padding: 12px 35px;
-    background-color: var(--skin-color);
-    color: white;
-    border-radius: 40px;
-    display: inline-block;
-    white-space: nowrap;
-    transition: all .3s ease;
-    border: none;
-}
-.btn:hover{
-    transform: scale(1.05);
-} */
+
 .row{
     display: flex;
     flex-wrap: wrap;

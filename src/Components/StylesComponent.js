@@ -1,5 +1,40 @@
 import styled from 'styled-components';
 
+export const Frame = styled.div`
+  flex: 0 0 40%;
+  max-width: 40%;
+  text-align: center;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+
+&:before{
+  content: '';
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-top: 10px solid ${(props)=> props.color};
+  border-left: 10px solid ${(props)=> props.color};
+  left: 20px;
+  top: -50px;
+}
+&:after{
+  content: '';
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-bottom: 10px solid ${(props)=> props.color};
+  border-right: 10px solid ${(props)=> props.color};
+  right: 20px;
+  bottom: -40px;
+}
+& img{
+  margin:auto;
+  height: 400px;
+  border-radius: 5px;
+}
+`
+
 export const Btn = styled.a`
   font-weight: 500;
   padding: 12px 35px;
@@ -10,11 +45,30 @@ export const Btn = styled.a`
   white-space: nowrap;
   transition: all .3s ease;
   border: none;
+  cursor: pointer;
 
-  &:hover{
+&:hover{
   transform: scale(1.05);
-  }
+}
 `
+export const BtnContact = styled.button`
+  font-weight: 500;
+  padding: 12px 35px;
+  background-color: ${(props)=> props.color};
+  color: white;
+  border-radius: 40px;
+  display: inline-block;
+  white-space: nowrap;
+  transition: all .3s ease;
+  border: none;
+  type:${(props)=> props.type};
+  cursor: pointer;
+
+&:hover{
+  transform: scale(1.05);
+}
+`
+
 export const Span = styled.span`
   font-family: 'Dancing Script', cursive;
   font-size: 30px;

@@ -21,6 +21,8 @@ function App() {
   
   const[skinColor, setSkinColor] = useState(styles_arr[0].color);
 
+
+
   // Toggle style - Switcher 
   const switchTogler = ()=>{
       document.querySelector(".style-switcher").classList.toggle("open");
@@ -32,6 +34,21 @@ function App() {
     }
   })
 
+// ---------- day-night mode ----------
+const printStatus = (status)=>{
+  console.log(status)    
+}
+const dayNightToggler = ()=>{  
+  const dayNight = document.querySelector(".day-night");
+  if(dayNight.querySelector("i").classList.contains("fa-moon")){
+    dayNight.querySelector("i").classList.toggle("fa-moon");
+    dayNight.querySelector("i").classList.toggle("fa-sun");
+  } else{
+    dayNight.querySelector("i").classList.toggle("fa-sun");
+    dayNight.querySelector("i").classList.toggle("fa-moon");
+  }  
+} 
+
   const SetActiveStyle = (color)=>{ 
     let colorValue=color.target.className;
     
@@ -41,6 +58,11 @@ function App() {
       }
     })  
   }
+
+
+
+
+// ----------- RENDERING ----------
 
   return (
     <>
@@ -61,7 +83,7 @@ function App() {
           <i className="fas fa-cog fa-spin"></i>
         </div>
         <div className="day-night s-icon">
-          <i className="fas fa-moon"></i>
+          <i className="fas fa-moon" onClick={dayNightToggler}></i>
         </div>
         <h4>Theme Colors</h4>
         <div className="colors">
