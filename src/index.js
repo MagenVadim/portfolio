@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import "./home.css"
-import "./about.css"
-import "./services.css"
-import "./portfolio.css"
-import "./contact.css"
+import "./Components/Home/home.css"
+import "./Components/About/about.css"
+import "./Components/Services/services.css"
+import "./Components/Portfolio/portfolio.css"
+import "./Components/Contact/contact.css"
 import "./style-switcher.css"
 
 import { BrowserRouter } from 'react-router-dom';

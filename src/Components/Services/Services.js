@@ -1,7 +1,7 @@
 import React from 'react'
 import ServiceItem from './ServiceItem'
 
-function Services() {
+function Services({skin}) {
   return (
     <div className='main-content'>
       <section className="service section">
@@ -17,37 +17,43 @@ function Services() {
               key={"mobile-alt"}
               className={'fa fa-mobile-alt'}
               item={'Web Design'}
-              description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}          
+              description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}
+              color={skin}          
             />
             <ServiceItem
               key={"palette"}
               className={'fa fa-palette'}
               item={'Web Design'}
-              description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}          
+              description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}  
+              color={skin}         
             />
             <ServiceItem
               key={"laptop-code"}
               className={'fa fa-laptop-code'}
               item={'Web Design'}
-              description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}          
+              description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}   
+              color={skin}        
             />
             <ServiceItem
               key={"code"}
               className={'fa fa-code'}
               item={'Web Design'}
-              description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}          
+              description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}
+              color={skin}           
             />
             <ServiceItem
               key={"search"}
               className={'fa fa-search'}
               item={'Web Design'}
-              description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}          
+              description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'} 
+              color={skin}          
             />
             <ServiceItem
               key={"bullhorn"}
               className={'fa fa-bullhorn'}
               item={'Web Design'}
-              description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}          
+              description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}
+              color={skin}           
             />
 
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import countries from '../images/countriesAPI.jpg'
+import countries from '../../images/countriesAPI.jpg'
 
 function PortfolioItems() {
   return (

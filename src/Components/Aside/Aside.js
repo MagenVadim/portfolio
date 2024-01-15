@@ -33,7 +33,6 @@ const NavActive = styled.a`
   color: ${(props)=> props.colorStatus ? props.color : '#302e4d'}         
 `
 
-
 let collectionAsideItems = [
   {id:"Home", status:true},
   {id:"About", status:false},
@@ -41,8 +40,6 @@ let collectionAsideItems = [
   {id:"Portfolio", status:false},
   {id:"Contact", status:false},
 ]
-
-
 
 function Aside({skin}) {
 

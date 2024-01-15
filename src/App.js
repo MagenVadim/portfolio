@@ -1,10 +1,10 @@
 import './App.css';
-import Aside from './Components/Aside'
-import Home from './Components/Home'
-import About from './Components/About'
-import Services from './Components/Services'
-import Portfolio from './Components/Portfolio'
-import Contact from './Components/Contact'
+import Aside from './Components/Aside/Aside'
+import Home from './Components/Home/Home'
+import About from './Components/About/About'
+import Services from './Components/Services/Services'
+import Portfolio from './Components/Portfolio/Portfolio'
+import Contact from './Components/Contact/Contact'
 import {Routes, Route} from 'react-router-dom';
 import {useState} from "react"
 
@@ -48,11 +48,11 @@ function App() {
         <Aside skin={skinColor}/>
 
         <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/about' element={<About/>}/>
-          <Route path='/services' element={<Services/>}/>
+          <Route path='/' element={<Home skin={skinColor}/>}/>
+          <Route path='/about' element={<About skin={skinColor}/>}/>
+          <Route path='/services' element={<Services skin={skinColor}/>}/>
           <Route path='/portfolio' element={<Portfolio/>}/>
-          <Route path='/contact' element={<Contact/>}/>
+          <Route path='/contact' element={<Contact skin={skinColor}/>}/>
         </Routes>
     </div>
 

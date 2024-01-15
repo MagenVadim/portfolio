@@ -1,8 +1,9 @@
 import React from 'react'
 import ContactItem from './ContactItem'
 import TypeForm from './TypeForm'
+import {HeaderQuestion} from '../StylesComponent'
 
-function Contact() {
+function Contact({skin}) {
   return (
     <div className='main-content'>
         <section className="contact section">
@@ -12,17 +13,17 @@ function Contact() {
                         <h2>Contact Me</h2>
                     </div>
                 </div>
-                <h3 className="contact-title">Have You Any Questions?</h3>
+                <HeaderQuestion color={skin}>Have You Any Questions?</HeaderQuestion>
                 <h4 className="contact-sub-title">I'M AT YOUR SERVICES</h4>
 
                 <div className="row">
-                    <ContactItem message={"Call Us On"} iconName={"fa fa-phone"} info={"+972 52 9370346"}/>
-                    <ContactItem message={"Office"} iconName={"fa fa-map-marker-alt"} info={"Haifa (Israel)"}/>
-                    <ContactItem message={"Email"} iconName={"fa fa-envelope"} info={"magenvadim@gmail.com"}/>
-                    <ContactItem message={"Website"} iconName={"fa fa-globe-europe"} info={"www.domain.com"}/>
+                    <ContactItem color={skin} message={"Call Us On"} iconName={"fa fa-phone"} info={"+972 52 9370346"}/>
+                    <ContactItem color={skin} message={"Office"} iconName={"fa fa-map-marker-alt"} info={"Haifa (Israel)"}/>
+                    <ContactItem color={skin} message={"Email"} iconName={"fa fa-envelope"} info={"magenvadim@gmail.com"}/>
+                    <ContactItem color={skin} message={"Website"} iconName={"fa fa-globe-europe"} info={"www.domain.com"}/>
                 </div>
 
-                <h3 className="contact-title pad-15">SEND ME AN EMAIL</h3>
+                <HeaderQuestion color={skin}>SEND ME AN EMAIL</HeaderQuestion>
                 <h4 className="contact-sub-title pad-15">I'M VERY RESPONSIVE TO MESSAGES!</h4>
 
                 <div className="row">
