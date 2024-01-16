@@ -18,16 +18,6 @@
     transition: all .6S ease;
 }
 
-/* .service .service-item .service-item-inner:hover .icon{
-    background-color: var(--skin-color);
-} */
-
-
-/* .service .service-item .service-item-inner:hover .icon .fa{
-    font-size: 25px;
-    color: #ffffff;
-} */
-
 .service .service-item h4{
     font-size: 18px;
     margin-bottom: 15px;

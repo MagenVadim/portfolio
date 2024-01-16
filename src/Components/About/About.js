@@ -2,52 +2,24 @@ import React from 'react'
 import Skill from "./Skill"
 import InfoItem from "./InfoItem"
 import Timeline from "./Timeline"
-import styled from 'styled-components';
-import {Btn, Span, Typing} from '../StylesComponent'
-
-const Lines = styled.h2`
-    font-size: 40px;
-    color: #302e4d;
-    font-weight: 700;
-    position: relative;
-
-&:before{
-    content: '';
-    height: 4px;
-    width: 50px;
-    background-color: ${(props)=> props.color};
-    position: absolute;
-    top: 100%;
-    left:0;
-}    
-&:after{
-    content: '';
-    height: 4px;
-    width: 25px;
-    background-color: ${(props)=> props.color};
-    position: absolute;
-    top: 100%;
-    left:0;
-    margin-top: 8px;
-}
-`
+import {Btn, Span, Typing, Lines} from '../StylesComponent'
 
 
-function About({skin}) {
+function About({skin, lightDarkMode}) {
   return (
     <div className="main-content">
         <section className="about section">
             <div className="container">
                 <div className="row">
                     <div className="section-title pad-15">
-                        <Lines color={skin}>About Me</Lines>
+                        <Lines color={skin} lightDarkMode={lightDarkMode}>About Me</Lines>
                     </div>
                 </div>
                 <div className="row">
                     <div className="about-content pad-15">
                         <div className="row">
                             <div className="about-text pad-15">
-                                <h3>I'm <Span color={skin}>Vadym</Span> and <Typing color={skin}>Web Developer</Typing></h3>
+                                <h3>I'm <Span color={skin} lightDarkMode={lightDarkMode}>Vadym</Span> and <Typing color={skin}>Web Developer</Typing></h3>
 
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                                         et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

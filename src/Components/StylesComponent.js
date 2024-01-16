@@ -178,3 +178,30 @@ export const NavActive = styled.a`
   padding: 5px 15px;
   color: ${(props)=> props.colorStatus ? props.color : props.lightDarkMode.text_black_900}         
 `
+
+export const Lines = styled.h2`
+    font-size: 40px;
+    color: ${(props)=> props.lightDarkMode.text_black_900};
+    font-weight: 700;
+    position: relative;
+
+&:before{
+    content: '';
+    height: 4px;
+    width: 50px;
+    background-color: ${(props)=> props.color};
+    position: absolute;
+    top: 100%;
+    left:0;
+}    
+&:after{
+    content: '';
+    height: 4px;
+    width: 25px;
+    background-color: ${(props)=> props.color};
+    position: absolute;
+    top: 100%;
+    left:0;
+    margin-top: 8px;
+}
+`
