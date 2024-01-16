@@ -1,10 +1,10 @@
 import React from 'react'
 import {Icon, ServiceItemInner} from '../StylesComponent'
 
-function ServiceItem({color, className, item, description}) {
+function ServiceItem({color, className, item, description, lightDarkMode}) {
   return (
     <div className="service-item pad-15">
-        <ServiceItemInner>
+        <ServiceItemInner lightDarkMode={lightDarkMode}>
 
           <div className="icon">
               <Icon className={className} color={color}></Icon>

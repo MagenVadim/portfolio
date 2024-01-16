@@ -1,7 +1,7 @@
 import React from 'react'
 import ServiceItem from './ServiceItem'
 
-function Services({skin}) {
+function Services({skin, lightDarkMode}) {
   return (
     <div className='main-content'>
       <section className="service section">
@@ -18,42 +18,48 @@ function Services({skin}) {
               className={'fa fa-mobile-alt'}
               item={'Web Design'}
               description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}
-              color={skin}          
+              color={skin}
+              lightDarkMode={lightDarkMode}          
             />
             <ServiceItem
               key={"palette"}
               className={'fa fa-palette'}
               item={'Web Design'}
               description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}  
-              color={skin}         
+              color={skin}   
+              lightDarkMode={lightDarkMode}         
             />
             <ServiceItem
               key={"laptop-code"}
               className={'fa fa-laptop-code'}
               item={'Web Design'}
               description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}   
-              color={skin}        
+              color={skin}
+              lightDarkMode={lightDarkMode}           
             />
             <ServiceItem
               key={"code"}
               className={'fa fa-code'}
               item={'Web Design'}
               description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}
-              color={skin}           
+              color={skin}
+              lightDarkMode={lightDarkMode}              
             />
             <ServiceItem
               key={"search"}
               className={'fa fa-search'}
               item={'Web Design'}
               description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'} 
-              color={skin}          
+              color={skin}
+              lightDarkMode={lightDarkMode}             
             />
             <ServiceItem
               key={"bullhorn"}
               className={'fa fa-bullhorn'}
               item={'Web Design'}
               description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}
-              color={skin}           
+              color={skin}
+              lightDarkMode={lightDarkMode}              
             />
 
 

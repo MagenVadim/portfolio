@@ -126,8 +126,8 @@ export const Icon = styled.i`
 }
 `
 export const ServiceItemInner = styled.div`
-  background-color: #fdf9ff;
-  border: 1px solid #e8dfec;
+  background-color: ${(props)=> props.lightDarkMode.bg_black_100};
+  border: 1px solid ${(props)=> props.lightDarkMode.bg_black_50};
   border-radius: 10px;
   padding: 30px 15px;
   text-align: center;
@@ -146,4 +146,35 @@ export const ContactIcon = styled.i`
   font-size: 25px;
   color: ${(props)=> props.color};
   className: ${(props)=> props.className}
+`
+
+
+export const Logo = styled.a`
+&:before{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-bottom: 5px solid ${(props)=> props.color};
+  border-left: 5px solid ${(props)=> props.color};
+  bottom: 0;
+  left: 0;
+}
+&:after{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 5px solid ${(props)=> props.color};
+  border-right: 5px solid ${(props)=> props.color};
+  top: 0;
+  right: 0;
+}
+`
+export const NavActive = styled.a`
+  font-weight: 600;
+  display: block;
+  border-bottom: 1px solid #e8dfec;  
+  padding: 5px 15px;
+  color: ${(props)=> props.colorStatus ? props.color : props.lightDarkMode.text_black_900}         
 `

@@ -19,9 +19,23 @@ function App() {
     {model:'color_5', color:"#f021b2"}
   ]
   
+  const light_mode = {
+    'bg_black_900':'#f2f2fc',
+    'bg_black_100': '#fdf9ff',
+    'bg_black_50': '#e8dfec',
+    'text_black_900': '#302e4d',
+    'text_black_700': '#504e70'
+  }
+  const dark_mode = {
+    'bg_black_900': '#151515',
+    'bg_black_100': '#222222',
+    'bg_black_50': '#393939',
+    'text_black_900': '#ffffff',
+    'text_black-700': '#e9e9e9',
+  }
+
   const[skinColor, setSkinColor] = useState(styles_arr[0].color);
-
-
+  const[lightDarkMode, setLightDarkMode] = useState(light_mode)
 
   // Toggle style - Switcher 
   const switchTogler = ()=>{
@@ -40,12 +54,18 @@ const printStatus = (status)=>{
 }
 const dayNightToggler = ()=>{  
   const dayNight = document.querySelector(".day-night");
+  const body = document.querySelector("body");
+
   if(dayNight.querySelector("i").classList.contains("fa-moon")){
     dayNight.querySelector("i").classList.toggle("fa-moon");
     dayNight.querySelector("i").classList.toggle("fa-sun");
+    body.classList.toggle("dark");
+    setLightDarkMode(dark_mode);
   } else{
     dayNight.querySelector("i").classList.toggle("fa-sun");
     dayNight.querySelector("i").classList.toggle("fa-moon");
+    body.classList.toggle("dark");
+    setLightDarkMode(light_mode);
   }  
 } 
 
@@ -59,22 +79,19 @@ const dayNightToggler = ()=>{
     })  
   }
 
-
-
-
 // ----------- RENDERING ----------
 
   return (
     <>
       <div className='main-container'>
-        <Aside skin={skinColor}/>
+        <Aside skin={skinColor} lightDarkMode={lightDarkMode}/>
 
         <Routes>
-          <Route path='/' element={<Home skin={skinColor}/>}/>
-          <Route path='/about' element={<About skin={skinColor}/>}/>
-          <Route path='/services' element={<Services skin={skinColor}/>}/>
-          <Route path='/portfolio' element={<Portfolio/>}/>
-          <Route path='/contact' element={<Contact skin={skinColor}/>}/>
+          <Route path='/' element={<Home skin={skinColor} lightDarkMode={lightDarkMode}/>}/>
+          <Route path='/about' element={<About skin={skinColor} lightDarkMode={lightDarkMode}/>}/>
+          <Route path='/services' element={<Services skin={skinColor} lightDarkMode={lightDarkMode}/>}/>
+          <Route path='/portfolio' element={<Portfolio lightDarkMode={lightDarkMode}/>}/>
+          <Route path='/contact' element={<Contact skin={skinColor} lightDarkMode={lightDarkMode}/>}/>
         </Routes>
     </div>
 
