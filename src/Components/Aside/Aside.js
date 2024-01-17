@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import {useState} from "react"
-import {Logo, NavActive} from '../StylesComponent'
+import {Logo, NavActive, NavToggler, SpanNavToggler} from '../StylesComponent'
 
 let collectionAsideItems = [
   {id:"Home", status:true},
@@ -47,9 +47,14 @@ function Aside({skin, lightDarkMode}) {
       <div className="logo">
         <Logo color={skin} href="#"><span>M</span>agen</Logo>
       </div>
-      <div className="nav-toggler">
-        <span></span>
-      </div>
+
+
+      <NavToggler color={skin} lightDarkMode={lightDarkMode}>
+        <SpanNavToggler color={skin} lightDarkMode={lightDarkMode}></SpanNavToggler>
+      </NavToggler>
+
+
+
       <ul className="nav">
             <li><NavActive colorStatus={colorStatus("Home")} color={skin} lightDarkMode={lightDarkMode} href="#" onClick={()=>{navigate('/'); asideItemClick("Home")}}><i className="fa fa-home"></i>Home</NavActive></li>
             <li><NavActive colorStatus={colorStatus("About")} color={skin} lightDarkMode={lightDarkMode} href="#" onClick={()=>{navigate('/about'); asideItemClick("About")}}><i className="fa fa-user"></i>About</NavActive></li>

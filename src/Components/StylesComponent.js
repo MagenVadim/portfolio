@@ -205,3 +205,47 @@ export const Lines = styled.h2`
     margin-top: 8px;
 }
 `
+
+
+export const NavToggler = styled.div`
+  height: 40px;
+  width: 45px;
+  border: 1px solid ${(props)=> props.lightDarkMode.bg_black_50};
+  cursor: pointer;
+  position: fixed;
+  left: 300px;
+  top: 20px;
+  border-radius: 5px;
+  background: ${(props)=> props.lightDarkMode.bg_black_100};
+  display: none;
+  align-items: center;
+  justify-content: center;
+@media (max-width:1200px){
+  display:flex
+  }
+`
+export const SpanNavToggler = styled.span`
+  height: 2px;
+  width: 18px;
+  background: ${(props)=> props.color};
+  display: inline-block;
+  position: relative;
+&:before{
+  content: '';
+  height: 2px;
+  width: 18px;
+  background: ${(props)=> props.color};
+  position: absolute;
+  top: -6px;
+  left: 0;
+}
+&:after{
+  content: '';
+  height: 2px;
+  width: 18px;
+  background: ${(props)=> props.color};
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
+`
