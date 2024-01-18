@@ -79,6 +79,7 @@ const dayNightToggler = ()=>{
     })  
   }
 
+
 // ----------- RENDERING ----------
 
   return (
@@ -89,7 +90,7 @@ const dayNightToggler = ()=>{
         <Routes>
           <Route path='/' element={<Home skin={skinColor} lightDarkMode={lightDarkMode}/>}/>
           <Route path='/about' element={<About skin={skinColor} lightDarkMode={lightDarkMode}/>}/>
-          <Route path='/services' element={<Services skin={skinColor} lightDarkMode={lightDarkMode}/>}/>
+          <Route path='/services' element={<Services skin={skinColor} lightDarkMode={lightDarkMode} />}/>
           <Route path='/portfolio' element={<Portfolio lightDarkMode={lightDarkMode}/>}/>
           <Route path='/contact' element={<Contact skin={skinColor} lightDarkMode={lightDarkMode}/>}/>
         </Routes>

@@ -6,6 +6,8 @@ import {Btn, Span, Typing, Lines} from '../StylesComponent'
 
 
 function About({skin, lightDarkMode}) {
+
+
   return (
     <div className="main-content">
         <section className="about section">

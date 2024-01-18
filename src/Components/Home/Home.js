@@ -3,6 +3,8 @@ import hero from '../../images/hero2.jpg'
 import {Frame, Btn, Span, Typing} from '../StylesComponent'
 
 function Home({skin}) {
+
+
   return (
     <div className='main-content'>
         <section className="home section">

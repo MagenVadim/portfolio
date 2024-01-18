@@ -220,10 +220,13 @@ export const NavToggler = styled.div`
   display: none;
   align-items: center;
   justify-content: center;
+  transition: all .3s ease;
 @media (max-width:1200px){
-  display:flex
+  display:flex;
+  left: ${(props)=> props.navTogler.left};
   }
 `
+
 export const SpanNavToggler = styled.span`
   height: 2px;
   width: 18px;
