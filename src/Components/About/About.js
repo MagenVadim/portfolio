@@ -2,15 +2,16 @@ import React from 'react'
 import Skill from "./Skill"
 import InfoItem from "./InfoItem"
 import Timeline from "./Timeline"
-import {Btn, Span, Typing, Lines} from '../StylesComponent'
+import {Btn, Span, Typing, Lines, Section} from '../StylesComponent'
 
 
-function About({skin, lightDarkMode}) {
+function About({skin, navToglerValue, lightDarkMode}) {
 
 
   return (
     <div className="main-content">
-        <section className="about section">
+
+        <Section navToglerValue={navToglerValue} lightDarkMode={lightDarkMode}>
             <div className="container">
                 <div className="row">
                     <div className="section-title pad-15">
@@ -139,7 +140,7 @@ function About({skin, lightDarkMode}) {
 
             </div>
       
-        </section>
+        </Section>
     </div>
     
   )

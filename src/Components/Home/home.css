@@ -1,10 +1,14 @@
-.home{
+/* .home{
     min-height: 100vh;
     display: flex;
     color: var(--text-black-900);
-    /* background-image: url("../../images/wall-background.jpg");     */
-}
-.home .home-info{
+   
+} */
+
+ /* background-image: url("../../images/wall-background.jpg");     */
+
+
+.home-info{
     flex: 0 0 60%;
     max-width: 60%;
 }
@@ -38,7 +42,7 @@ h3.my-profession{
     margin: 15px 0;
 }
 
-.home .home-info p{
+.home-info p{
     margin-bottom: 70px;
     font-size: 20px;
     color: var(--text-black-700);

@@ -11,24 +11,10 @@ let collectionAsideItems = [
   {id:"Contact", status:false},
 ]
 
-const navToglerOpen = {
-  'left':'300px'
-}
-const navToglerClosed = {
-  'left':'30px'
-}
 
-
-function Aside({skin, lightDarkMode}) {
+function Aside({skin, lightDarkMode, navToglerStatus, navToglerValue, switchSetnavToglerStatus, switchSetnavToglerValue}) {
 
   const[asideItems, setAsideItems] = useState(collectionAsideItems);
-  const[navToglerStatus, setnavToglerStatus] = useState(true)
-  const[navTogler, setnavTogler] = useState(navToglerClosed)
-
-  const switchSetnavToglerStatus =()=>{
-    setnavToglerStatus(prevState => !prevState)
-  }
-
 
   const navigate = useNavigate();
 
@@ -60,25 +46,13 @@ function Aside({skin, lightDarkMode}) {
   const asideSectionTogglerBtn =()=>{
     const aside = document.getElementById("aside");    
     aside.classList.toggle("open");
-
-    // const sectionStatus = document.querySelector(".section");
-    // sectionStatus.classList.toggle("open");
   }
 
-  const responsiveSection = () =>{
-    const section = document.querySelector(".section");  
-    section.classList.toggle("open")
-    
-    navToglerStatus 
-     ? console.log("navToglerStatus TRUE - CLOSE: " + section.className)
-     : console.log("navToglerStatus FALSE - OPEN: " + section.className) 
-  }
 
   const navTogglerBtn = ()=>{
     asideSectionTogglerBtn(); // меняем имя класса  Aside - Open класс
-    navToglerStatus ? setnavTogler(navToglerOpen) : setnavTogler(navToglerClosed); // передаем ширину отступа (30 или 300 для кнопки) в переменную
-    switchSetnavToglerStatus(); // переключаем статус true/false при каждом нажатии кнопки
-    responsiveSection();   // меняем имя класса Section - Open класс
+    switchSetnavToglerValue(); // передаем ширину отступа (30 или 300 для кнопки) в переменную
+    switchSetnavToglerStatus(); // переключаем статус true/false при каждом нажатии кнопки    
   }
 
   
@@ -89,7 +63,7 @@ function Aside({skin, lightDarkMode}) {
       </div>
 
 
-      <NavToggler color={skin} lightDarkMode={lightDarkMode} navTogler={navTogler} onClick={navTogglerBtn} >
+      <NavToggler color={skin} lightDarkMode={lightDarkMode} navToglerValue={navToglerValue} onClick={navTogglerBtn} >
         <SpanNavToggler color={skin} lightDarkMode={lightDarkMode}></SpanNavToggler>
       </NavToggler>
 

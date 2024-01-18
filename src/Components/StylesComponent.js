@@ -223,7 +223,7 @@ export const NavToggler = styled.div`
   transition: all .3s ease;
 @media (max-width:1200px){
   display:flex;
-  left: ${(props)=> props.navTogler.left};
+  left: ${(props)=> props.navToglerValue.left};
   }
 `
 
@@ -250,5 +250,29 @@ export const SpanNavToggler = styled.span`
   position: absolute;
   top: 6px;
   left: 0;
+}
+`
+
+export const Section = styled.section`
+  min-height: 100vh;
+  display: flex;
+  color: ${(props)=> props.lightDarkMode.text_black_900};
+
+  background-color: ${(props)=> props.lightDarkMode.bg_black_900};
+  min-height: 100vh;
+  // display: block;
+  opacity: 1;
+  padding: 0 30px;
+  position: fixed;
+  left: ${(props)=> props.navToglerValue.SectionLeftWide};
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all .3s ease;
+@media (max-width:1200px){
+  left: ${(props)=> props.navToglerValue.SectionLeft1200};
 }
 `

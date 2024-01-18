@@ -79,17 +79,44 @@ const dayNightToggler = ()=>{
     })  
   }
 
+// ----------- NAV-TOGGLER ----------
+const navToglerOpen = {
+  'left':'300px',
+  'SectionLeft': '270px'
+}
+const navToglerClosed = {
+  'left':'30px',
+  'SectionLeftWide': '270px',
+  'SectionLeft1200': '0'
+}
+
+const[navToglerStatus, setnavToglerStatus] = useState(true)
+const[navToglerValue, setnavToglerValue] = useState(navToglerClosed)
+
+const switchSetnavToglerStatus =()=>{
+  setnavToglerStatus(prevState => !prevState)
+}
+const switchSetnavToglerValue =()=>{
+  navToglerStatus ? setnavToglerValue(navToglerOpen) : setnavToglerValue(navToglerClosed)
+}
+
 
 // ----------- RENDERING ----------
 
   return (
     <>
       <div className='main-container'>
-        <Aside skin={skinColor} lightDarkMode={lightDarkMode}/>
+        <Aside skin={skinColor}
+         lightDarkMode={lightDarkMode}
+         navToglerStatus={navToglerStatus}
+         navToglerValue={navToglerValue}
+         switchSetnavToglerStatus={switchSetnavToglerStatus}
+         switchSetnavToglerValue = {switchSetnavToglerValue}
+         />
 
         <Routes>
-          <Route path='/' element={<Home skin={skinColor} lightDarkMode={lightDarkMode}/>}/>
-          <Route path='/about' element={<About skin={skinColor} lightDarkMode={lightDarkMode}/>}/>
+          <Route path='/' element={<Home skin={skinColor} lightDarkMode={lightDarkMode} navToglerValue={navToglerValue}/>}/>
+          <Route path='/about' element={<About skin={skinColor} lightDarkMode={lightDarkMode} navToglerValue={navToglerValue}/>}/>
           <Route path='/services' element={<Services skin={skinColor} lightDarkMode={lightDarkMode} />}/>
           <Route path='/portfolio' element={<Portfolio lightDarkMode={lightDarkMode}/>}/>
           <Route path='/contact' element={<Contact skin={skinColor} lightDarkMode={lightDarkMode}/>}/>

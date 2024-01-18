@@ -1,13 +1,13 @@
 import React from 'react'
 import hero from '../../images/hero2.jpg'
-import {Frame, Btn, Span, Typing} from '../StylesComponent'
+import {Frame, Btn, Span, Typing, Section} from '../StylesComponent'
 
-function Home({skin}) {
+function Home({skin, navToglerValue, lightDarkMode}) {
 
 
   return (
     <div className='main-content'>
-        <section className="home section">
+        <Section navToglerValue={navToglerValue} lightDarkMode={lightDarkMode}>
             <div className="container">
               <div className="row">
                 <div className="home-info pad-15">
@@ -21,7 +21,7 @@ function Home({skin}) {
                 </Frame>
               </div>
             </div>
-        </section>      
+        </Section>      
     </div>
   )
 }
