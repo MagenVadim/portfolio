@@ -117,9 +117,9 @@ const switchSetnavToglerValue =()=>{
         <Routes>
           <Route path='/' element={<Home skin={skinColor} lightDarkMode={lightDarkMode} navToglerValue={navToglerValue}/>}/>
           <Route path='/about' element={<About skin={skinColor} lightDarkMode={lightDarkMode} navToglerValue={navToglerValue}/>}/>
-          <Route path='/services' element={<Services skin={skinColor} lightDarkMode={lightDarkMode} />}/>
-          <Route path='/portfolio' element={<Portfolio lightDarkMode={lightDarkMode}/>}/>
-          <Route path='/contact' element={<Contact skin={skinColor} lightDarkMode={lightDarkMode}/>}/>
+          <Route path='/services' element={<Services skin={skinColor} lightDarkMode={lightDarkMode} navToglerValue={navToglerValue}/>}/>
+          <Route path='/portfolio' element={<Portfolio lightDarkMode={lightDarkMode} navToglerValue={navToglerValue}/>}/>
+          <Route path='/contact' element={<Contact skin={skinColor} lightDarkMode={lightDarkMode} navToglerValue={navToglerValue}/>}/>
         </Routes>
     </div>
 

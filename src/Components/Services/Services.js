@@ -1,10 +1,11 @@
 import React from 'react'
 import ServiceItem from './ServiceItem'
+import {Section} from '../StylesComponent'
 
-function Services({skin, lightDarkMode}) {
+function Services({skin, lightDarkMode, navToglerValue}) {
   return (
     <div className='main-content'>
-      <section className="service section">
+      <Section navToglerValue={navToglerValue} lightDarkMode={lightDarkMode}>
         <div className="container">
           <div className="row">
             <div className="section-title pad-15">
@@ -69,7 +70,7 @@ function Services({skin, lightDarkMode}) {
 
 
         </div>
-      </section>
+      </Section>
     </div>
     
   )

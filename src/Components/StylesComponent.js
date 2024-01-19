@@ -53,6 +53,7 @@ export const Btn = styled.a`
 `
 export const BtnContact = styled.button`
   font-weight: 500;
+  font-size: 18px;
   padding: 12px 35px;
   background-color: ${(props)=> props.color};
   color: white;

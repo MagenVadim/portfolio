@@ -1,12 +1,12 @@
 import React from 'react'
 import ContactItem from './ContactItem'
 import TypeForm from './TypeForm'
-import {BtnContact, HeaderQuestion} from '../StylesComponent'
+import {BtnContact, HeaderQuestion, Section} from '../StylesComponent'
 
-function Contact({skin}) {
+function Contact({skin, navToglerValue, lightDarkMode}) {
   return (
     <div className='main-content'>
-        <section className="contact section">
+        <Section navToglerValue={navToglerValue} lightDarkMode={lightDarkMode}>
             <div className="container">
                 <div className="row">
                     <div className="section-title pad-15">
@@ -56,7 +56,7 @@ function Contact({skin}) {
                 </div>
 
             </div>
-        </section>
+        </Section>
 
     </div>
     
