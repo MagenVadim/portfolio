@@ -3,9 +3,26 @@ import Skill from "./Skill"
 import InfoItem from "./InfoItem"
 import Timeline from "./Timeline"
 import {Btn, Span, Typing, Lines, Section} from '../StylesComponent'
+import {useNavigate} from 'react-router-dom'
 
 
-function About({skin, navToglerValue, lightDarkMode}) {
+function About({skin, navToglerValue, lightDarkMode, setAsideItems}) {
+    const navigate = useNavigate()
+
+    const newAsideItemsCollection = ()=>{
+        const newAtimeCollection = [
+            {id:"Home", status:false},
+            {id:"About", status:false},
+            {id:"Services", status:false},
+            {id:"Portfolio", status:false},
+            {id:"Contact", status:true}
+        ]
+        setAsideItems(newAtimeCollection)
+    }
+    const clickHireMe = ()=>{
+        {navigate('/contact')};
+        newAsideItemsCollection();
+    }
 
 
   return (
@@ -48,8 +65,7 @@ function About({skin, navToglerValue, lightDarkMode}) {
                                 </div>
                                 <div className="row">
                                     <div className="buttons pad-15">
-                                        <Btn color={skin} href="#">Download CV</Btn>
-                                        <Btn color={skin} href="#contact">Hire Me</Btn>
+                                        <Btn color={skin} href="#contact" onClick={clickHireMe}>Hire Me</Btn>
                                     </div>
                                 </div>
                             </div>

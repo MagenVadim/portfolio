@@ -1,20 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import {useState} from "react"
 import {Logo, NavActive, NavToggler, SpanNavToggler} from '../StylesComponent'
 
-let collectionAsideItems = [
-  {id:"Home", status:true},
-  {id:"About", status:false},
-  {id:"Services", status:false},
-  {id:"Portfolio", status:false},
-  {id:"Contact", status:false},
-]
-
-
-function Aside({skin, lightDarkMode, navToglerStatus, navToglerValue, switchSetnavToglerStatus, switchSetnavToglerValue}) {
-
-  const[asideItems, setAsideItems] = useState(collectionAsideItems);
+function Aside({skin, lightDarkMode, navToglerValue, switchSetnavToglerStatus, switchSetnavToglerValue,
+  collectionAsideItems, asideItems, setAsideItems
+}) {
 
   const navigate = useNavigate();
 

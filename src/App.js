@@ -5,7 +5,7 @@ import About from './Components/About/About'
 import Services from './Components/Services/Services'
 import Portfolio from './Components/Portfolio/Portfolio'
 import Contact from './Components/Contact/Contact'
-import {Routes, Route} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom'
 import {useState} from "react"
 
 
@@ -49,9 +49,6 @@ function App() {
   })
 
 // ---------- day-night mode ----------
-const printStatus = (status)=>{
-  console.log(status)    
-}
 const dayNightToggler = ()=>{  
   const dayNight = document.querySelector(".day-night");
   const body = document.querySelector("body");
@@ -100,9 +97,18 @@ const switchSetnavToglerValue =()=>{
   navToglerStatus ? setnavToglerValue(navToglerOpen) : setnavToglerValue(navToglerClosed)
 }
 
+// ----------- ASIDE COLORS BUTTON ----------
+let collectionAsideItems = [
+  {id:"Home", status:true},
+  {id:"About", status:false},
+  {id:"Services", status:false},
+  {id:"Portfolio", status:false},
+  {id:"Contact", status:false}
+]
+const[asideItems, setAsideItems] = useState(collectionAsideItems);
+
 
 // ----------- RENDERING ----------
-
   return (
     <>
       <div className='main-container'>
@@ -112,11 +118,19 @@ const switchSetnavToglerValue =()=>{
          navToglerValue={navToglerValue}
          switchSetnavToglerStatus={switchSetnavToglerStatus}
          switchSetnavToglerValue = {switchSetnavToglerValue}
+
+         collectionAsideItems = {collectionAsideItems}
+         asideItems = {asideItems}
+         setAsideItems = {setAsideItems}
          />
 
         <Routes>
           <Route path='/' element={<Home skin={skinColor} lightDarkMode={lightDarkMode} navToglerValue={navToglerValue}/>}/>
-          <Route path='/about' element={<About skin={skinColor} lightDarkMode={lightDarkMode} navToglerValue={navToglerValue}/>}/>
+          <Route path='/about' element={
+              <About skin={skinColor} lightDarkMode={lightDarkMode} navToglerValue={navToglerValue}
+              asideItems={asideItems} setAsideItems={setAsideItems}
+              />
+            }/>
           <Route path='/services' element={<Services skin={skinColor} lightDarkMode={lightDarkMode} navToglerValue={navToglerValue}/>}/>
           <Route path='/portfolio' element={<Portfolio lightDarkMode={lightDarkMode} navToglerValue={navToglerValue}/>}/>
           <Route path='/contact' element={<Contact skin={skinColor} lightDarkMode={lightDarkMode} navToglerValue={navToglerValue}/>}/>

@@ -46,7 +46,7 @@ export const Btn = styled.a`
   transition: all .3s ease;
   border: none;
   cursor: pointer;
-
+  
 &:hover{
   transform: scale(1.05);
 }

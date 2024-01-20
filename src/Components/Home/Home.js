@@ -14,7 +14,7 @@ function Home({skin, navToglerValue, lightDarkMode}) {
                   <h3 className="hello">Hello, my name is <Span color={skin}>Vadym</Span></h3>
                   <h3 className="my-profession">I'm a <Typing color={skin}>Web Developer</Typing></h3>
                   <p>I'm a web Developer with extensive experience for over 10 years. My expertise is to create and website design, graphic design, and many more... </p>
-                   <Btn color={skin} href="#contact">Hire Me</Btn>
+                   <Btn color={skin} href="#contact">Download CV</Btn>
                 </div>
                 <Frame color={skin}>
                   <img src={hero} alt="" />
