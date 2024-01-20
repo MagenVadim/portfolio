@@ -17,7 +17,14 @@ export const Frame = styled.div`
   border-left: 10px solid ${(props)=> props.color};
   left: 20px;
   top: -50px;
+    @media (max-width:990px){
+      height: 40px;
+      width: 40px;
+      left: 20px;
+      top: 70px;
+  }
 }
+
 &:after{
   content: '';
   position: absolute;
@@ -27,11 +34,22 @@ export const Frame = styled.div`
   border-right: 10px solid ${(props)=> props.color};
   right: 20px;
   bottom: -40px;
+    @media (max-width:990px){
+      height: 40px;
+      width: 40px;
+      left: 140px;
+      top: 240px;
+  }
 }
+
 & img{
   margin:auto;
   height: 400px;
   border-radius: 5px;
+    @media (max-width:990px){
+      margin-top: 100px;
+      height: 150px;
+}
 }
 `
 

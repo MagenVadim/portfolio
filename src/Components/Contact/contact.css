@@ -68,6 +68,9 @@
 
 
 @media (max-width:1200px){
+    .container{
+        padding-top: 70px;
+    }
     .aside{
         left: -270px;
     }
