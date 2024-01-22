@@ -82,9 +82,14 @@ export const BtnContact = styled.button`
   border: none;
   type:${(props)=> props.type};
   cursor: pointer;
-
+  margin-right: 20px;
 &:hover{
   transform: scale(1.05);
+}
+&:disabled{
+  cursor: auto;
+  transform: none;
+  opacity: .4;
 }
 `
 

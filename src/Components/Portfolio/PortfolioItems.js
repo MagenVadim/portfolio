@@ -1,12 +1,15 @@
 import React from 'react'
-import countries from '../../images/countriesAPI.jpg'
 
-function PortfolioItems() {
+
+function PortfolioItems({imgSource, url}) {
   return (
     <div className="portfolio-item">
         <div className="portfolio-item-inner shadow-dark">
             <div className="portfolio-img">
-                <img src={countries} alt="" />
+              <a href={url}>
+                <img src={imgSource} alt="" />
+              </a>
+                
             </div>
         </div>
     </div>

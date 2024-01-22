@@ -1,10 +1,10 @@
 import React from 'react'
 
-function TypeForm({className, type, placeholder}) {
+function TypeForm({className, type, placeholder, blurHandler, name}) {
   return (
     <div className={className}>
         <div className="form-group">
-            <input type={type} className="form-control" placeholder={placeholder}/>
+            <input onBlur={e=>blurHandler(e)} name={name} type={type} className="form-control" placeholder={placeholder} required/>
         </div>
     </div>
   )
