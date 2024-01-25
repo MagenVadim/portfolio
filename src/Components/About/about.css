@@ -1,3 +1,7 @@
+.about-deascription{
+    text-indent: 20px;
+}
+
 .container{
     padding-top: 60px;
     padding-bottom: 70px;
@@ -42,6 +46,7 @@
     padding: 10px 0;
     color: var(--text-black-900);
     border-bottom: 1px solid var(--bg-black-50);
+    margin-bottom: 25px;
 }
 
 

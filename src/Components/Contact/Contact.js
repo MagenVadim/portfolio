@@ -182,7 +182,7 @@ function Contact({skin, navToglerValue, lightDarkMode}) {
                                         id=""
                                         placeholder="Message"
                                         value={message}
-                                        style={{color:'red', 'padding-left':'20px'}}
+                                        style={{'padding-left':'20px'}}
                                     > 
                                     </textarea>     
 

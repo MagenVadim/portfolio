@@ -41,11 +41,15 @@ function About({skin, navToglerValue, lightDarkMode, setAsideItems}) {
                             <div className="about-text pad-15">
                                 <h3>I'm <Span color={skin} lightDarkMode={lightDarkMode}>Vadym</Span> and <Typing color={skin}>Web Developer</Typing></h3>
 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                        officia deserunt mollit anim id est laborum
+                                <p className='about-deascription'>I am experienced Front-End Developer with experience building websites and web apps from scratch.
+                                    I primarily focus on writing clean, elegant, and efficient code.
+                                    I am proficient in HTML, CSS, JavaScript, Bootstrap and React. 
+                                    <br />Building responsive and user-friendly websites and apps
+                                    I also review existing code and can consult with you on how to improve it.
+                                </p>
+                                <p className="about-deascription">
+                                    Extremely passionate towards software architecture and design combined with sensitivity to serve the needs of the business balanced with the delivery of high quality solutions.
+                                    I deal with with servers as well.
                                 </p>
                             </div>
                         </div>
@@ -54,8 +58,7 @@ function About({skin, navToglerValue, lightDarkMode, setAsideItems}) {
 
                             <div className="personal-info pad-15">
                                 <div className="row">
-                                    <InfoItem key={'Birthday'} title={'Birthday'} info={1982}/>
-                                    <InfoItem key={'Age'} title={'Age'} info={41}/>
+
                                     <InfoItem key={'Website'} title={'Website'} info={'www.domain.com'}/>
                                     <InfoItem key={'Email'} title={'Email'} info={'magernvadim@gmail.com'}/>
                                     <InfoItem key={'Degree'} title={'Degree'} info={'Computer Science'}/>
@@ -91,28 +94,28 @@ function About({skin, navToglerValue, lightDarkMode, setAsideItems}) {
                         <div className="row">
                             <div className="timeline-box pad-15">
                                 <div className="timeline shadow-dark">
-                                    <Timeline
+
+                                     <Timeline
                                         key={1}
-                                        date={'2013-2015'}
-                                        level={'Master in Computer Science'}
-                                        descr={'Lorem ipsum dolor sit amet consectetur adipisicing elit.'}
+                                        date={'2022-2023'}
+                                        level={'The Front-End Web Developer Bootcamp'}
+                                        descr={'online Udemy course'}
                                         color={skin}
                                     />
                                     <Timeline
                                         key={2}
-                                        date={'2018-2020'}
-                                        level={'Master in Computer Science'}
-                                        descr={'Lorem ipsum dolor sit amet consectetur adipisicing elit.'}
+                                        date={'2020-2021'}
+                                        level={'course QA Automation'}
+                                        descr={'Tel-Aviv (Israel)'}
                                         color={skin}
                                     />
                                     <Timeline
                                         key={3}
-                                        date={'2020-2021'}
-                                        level={'Master in Computer Science'}
-                                        descr={'Lorem ipsum dolor sit amet consectetur adipisicing elit.'}
+                                        date={'2022-2023'}
+                                        level={'The Front-End Web Developer Bootcamp'}
+                                        descr={'online Udemy course'}
                                         color={skin}
                                     />
-
                                 </div>
                             </div>
                         </div>
@@ -125,23 +128,23 @@ function About({skin, navToglerValue, lightDarkMode, setAsideItems}) {
                                 <div className="timeline shadow-dark">
                                     <Timeline
                                         key={1}
-                                        date={'2013-2015'}
-                                        level={'Master in Computer Science'}
-                                        descr={'Lorem ipsum dolor sit amet consectetur adipisicing elit.'}
+                                        date={'2023-currently'}
+                                        level={'Frontend Developer'}
+                                        descr={'Upwork (freelance)'}
                                         color={skin}
                                     />
                                     <Timeline
                                         key={2}
-                                        date={'2018-2020'}
-                                        level={'Master in Computer Science'}
-                                        descr={'Lorem ipsum dolor sit amet consectetur adipisicing elit.'}
+                                        date={'2022-2023'}
+                                        level={'QA Automation Engineer'}
+                                        descr={"Seraphic Security (Israel)"}
                                         color={skin}
                                     />
                                     <Timeline
                                         key={3}
-                                        date={'2020-2021'}
-                                        level={'Master in Computer Science'}
-                                        descr={'Lorem ipsum dolor sit amet consectetur adipisicing elit.'}
+                                        date={'2021-2022'}
+                                        level={'QA Engineer'}
+                                        descr={'Real Time group (Israel)'}
                                         color={skin}
                                     />
 

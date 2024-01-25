@@ -15,60 +15,54 @@ function Services({skin, lightDarkMode, navToglerValue}) {
 
           <div className="row">
             <ServiceItem
-              key={"mobile-alt"}
-              className={'fa fa-mobile-alt'}
-              item={'Web Design'}
-              description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}
-              color={skin}
-              lightDarkMode={lightDarkMode}          
-            />
-            <ServiceItem
-              key={"palette"}
-              className={'fa fa-palette'}
-              item={'Web Design'}
-              description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}  
-              color={skin}   
-              lightDarkMode={lightDarkMode}         
-            />
-            <ServiceItem
-              key={"laptop-code"}
+              key={"webDevelopment"}
               className={'fa fa-laptop-code'}
-              item={'Web Design'}
-              description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}   
+              item={'Web Development'}
+              description={'Optimize the user experience using HTML, CSS, JavaScript, React to bring concepts to life. Develop and maintain the user interface by following SEO best practices.'}   
               color={skin}
               lightDarkMode={lightDarkMode}           
             />
             <ServiceItem
-              key={"code"}
-              className={'fa fa-code'}
-              item={'Web Design'}
-              description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}
-              color={skin}
-              lightDarkMode={lightDarkMode}              
-            />
-            <ServiceItem
-              key={"search"}
-              className={'fa fa-search'}
-              item={'Web Design'}
-              description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'} 
+              key={"react"}
+              className={'fa-brands fa-react'}
+              item={'React JS'}
+              description={'Design and develop user interface components. Develop reusable components and front-end libraries for future use. Optimize components for maximum performance across a vast array of web-capable devices and browsers.'} 
               color={skin}
               lightDarkMode={lightDarkMode}             
             />
             <ServiceItem
-              key={"bullhorn"}
-              className={'fa fa-bullhorn'}
-              item={'Web Design'}
-              description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem vitae nulla?'}
+              key={"javascript"}
+              className={'fa-brands fa-js'}
+              item={'Javascript'}
+              description={'Develop new user-facing features. Build reusable code and libraries for future use. Ensure the technical feasibility of UI/UX designs. Optimize applications for maximum speed and scalability.'}
               color={skin}
               lightDarkMode={lightDarkMode}              
             />
-
-
-
+            <ServiceItem
+              key={"Node JS"}
+              className={'fab fa-node'}
+              item={'Node JS'}
+              description={'Developing and maintaining all server-side network components. Designing customer-facing UI and back-end services for various business processes. Running diagnostic tests, repairing defects, and providing technical support.'}
+              color={skin}
+              lightDarkMode={lightDarkMode}          
+            />
+            <ServiceItem
+              key={"bootstrap"}
+              className={'fa-brands fa-bootstrap'}
+              item={'Bootstrap'}
+              description={'Develop code for the targeted environment. Design and implement front-end business applications. Support and maintain existing production code'}  
+              color={skin}   
+              lightDarkMode={lightDarkMode}         
+            />
+            <ServiceItem
+              key={"sass"}
+              className={'fab fa-sass'}
+              item={'SASS'}
+              description={'Automate repetitive tasks, reduce the number of errors and code bloat, create reusable code snippets, and ensure backward compatibility.'}
+              color={skin}
+              lightDarkMode={lightDarkMode}              
+            />
           </div>
-
-
-
         </div>
       </Section>
     </div>
