@@ -1,12 +1,12 @@
 import React from 'react'
 
 
-function PortfolioItems({imgSource, url, title}) {
+function PortfolioItems({imgSource, url, title, github}) {
   return (
     <div className="portfolio-item">
       <div className="title-item">
         <h4>{title + " :"}</h4>
-        <a className="github" target="_blank" href={"https://github.com/MagenVadim/dark-mode-rest-api-countries"}>
+        <a className="github" target="_blank" href={github}>
           <i class="fa-brands fa-github"></i>
         </a>
       </div>
