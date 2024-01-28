@@ -95,6 +95,13 @@ function Contact({skin, navToglerValue, lightDarkMode}) {
         }
     }
 
+    const sendEmail = ()=>{
+        let name = document.getElementsByName('name').value;
+        console.log(name)
+    }
+
+
+
   return (
     <div className='main-content'>
         <Section navToglerValue={navToglerValue} lightDarkMode={lightDarkMode}>
@@ -118,7 +125,7 @@ function Contact({skin, navToglerValue, lightDarkMode}) {
                 <h4 className="contact-sub-title pad-15">I'M VERY RESPONSIVE TO MESSAGES!</h4>
 
                 <div className="row">
-                    <form className="contact-form">                        
+                    <form action="magenvadim@gmail.com" method="post" className="contact-form">                        
                             <div className="row">
                                 <div className="typeform">              
                                     <div className="typeError">
@@ -191,7 +198,7 @@ function Contact({skin, navToglerValue, lightDarkMode}) {
 
                             <div className="row">
                                 <div className="form-item col-12 pad-15">
-                                    <BtnContact color={skin} type="submit" disabled={disabledButton}>Send Message</BtnContact>                                
+                                    <BtnContact onClick={sendEmail} color={skin} type="submit" disabled={disabledButton}>Send Message</BtnContact>                                
                                 </div>
                             </div>                            
                         
