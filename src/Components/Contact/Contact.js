@@ -3,6 +3,9 @@ import {useState, useEffect} from "react"
 import ContactItem from './ContactItem'
 import TypeForm from './TypeForm'
 import {BtnContact, HeaderQuestion, Section} from '../StylesComponent'
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 
 function Contact({skin, navToglerValue, lightDarkMode}) {
 
@@ -10,6 +13,7 @@ function Contact({skin, navToglerValue, lightDarkMode}) {
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
+    const [packet, setPacket] = useState({});
 
     const [nameStatus, setNameStatus] = useState(false);
     const [emailStatus, setEmailStatus] = useState(false);
@@ -95,11 +99,18 @@ function Contact({skin, navToglerValue, lightDarkMode}) {
         }
     }
 
-    const sendEmail = ()=>{
-        let name = document.getElementsByName('name').value;
-        console.log(name)
-    }
+    const form = useRef();
 
+    const handleSubmit = async (e)=>{
+        e.preventDefault(); 
+        
+        emailjs.sendForm('service_zqzo2j4', 'template_0h5pbxr', form.current, '_MjxxfaAJ_6craICI')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });       
+    }
 
 
   return (
@@ -125,7 +136,7 @@ function Contact({skin, navToglerValue, lightDarkMode}) {
                 <h4 className="contact-sub-title pad-15">I'M VERY RESPONSIVE TO MESSAGES!</h4>
 
                 <div className="row">
-                    <form action="magenvadim@gmail.com" method="post" className="contact-form">                        
+                    <form onSubmit={handleSubmit} ref={form} className="contact-form">                        
                             <div className="row">
                                 <div className="typeform">              
                                     <div className="typeError">
@@ -159,23 +170,6 @@ function Contact({skin, navToglerValue, lightDarkMode}) {
                             </div>
 
                             <div className="row">
-                                <div className="typeform-subject">
-                                    <div className="typeError">
-                                        {(subjectStatus && subjectError) && <div style={{color:'red', 'padding-left':'30px'}}>{subjectError}</div>}  
-                                    </div> 
-                                    <TypeForm
-                                        fieldlHandler={subjectHandler}
-                                        blurHandler={blurHandler}
-                                        name={'subject'}
-                                        className={"form-item col-12 pad-15"}
-                                        type={"text"}
-                                        placeholder={"Subject"}
-                                        value={subject}
-                                    />
-                                </div>
-                            </div>
-
-                            <div className="row">
                                 <div className="form-item col-12 pad-15">
                                     
                                     <div className="typeError">
@@ -198,7 +192,7 @@ function Contact({skin, navToglerValue, lightDarkMode}) {
 
                             <div className="row">
                                 <div className="form-item col-12 pad-15">
-                                    <BtnContact onClick={sendEmail} color={skin} type="submit" disabled={disabledButton}>Send Message</BtnContact>                                
+                                    <BtnContact color={skin} type="submit" disabled={disabledButton}>Send Message</BtnContact>                                
                                 </div>
                             </div>                            
                         
