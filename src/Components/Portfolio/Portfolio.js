@@ -6,6 +6,9 @@ import jobListing from '../../images/JobListing.png'
 import snickersStore from '../../images/snickersStore.jpg'
 import notification from '../../images/notification.png'
 import todo from '../../images/todo.png'
+import quiz from '../../images/quiz.png'
+import invitation from '../../images/invitation.png'
+
 
 const linkSourse = [
     {name: "Job listings with filtering",
@@ -33,7 +36,18 @@ const linkSourse = [
         url: "https://main.d1t4lt62kkmhda.amplifyapp.com/",
         github:"https://github.com/MagenVadim/todo-list",
         image:todo
-    }        
+    },
+    {name: "Quiz",
+        url: "https://main.d2rgrsz9qdmo4c.amplifyapp.com/",
+        github:"https://github.com/MagenVadim/quiz",
+        image:quiz
+    },  
+    {
+     name: "Invitations",
+     url:"https://main.d3fw4jshofxvm1.amplifyapp.com/",
+     github:"https://github.com/MagenVadim/users-list",
+     image:invitation
+    }
 ]
 
 
