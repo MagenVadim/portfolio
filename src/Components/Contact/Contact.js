@@ -11,28 +11,24 @@ function Contact({skin, navToglerValue, lightDarkMode}) {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
-    const [packet, setPacket] = useState({});
 
     const [nameStatus, setNameStatus] = useState(false);
     const [emailStatus, setEmailStatus] = useState(false);
-    const [subjectStatus, setSubjectStatus] = useState(false);
     const [messageStatus, setMessageStatus] = useState(false);
     const [disabledButton, setDisabledButton] = useState(true);
     
     const [nameError, setNameError] = useState("Name field can't be empty!");
-    const [emailError, setEmailError] = useState("Email field can't be empty!");
-    const [subjectError, setSubjectError] = useState("Subject field can't be empty!");
+    const [emailError, setEmailError] = useState("Email field can't be empty!"); 
     const [messageError, setMessageError] = useState("Message field can't be empty!");
 
-
     useEffect(()=>{
-        if(nameStatus && emailStatus && subjectStatus && messageStatus
-            && nameError===''  && emailError===''  && subjectError===''  && messageError===''){
+        if(nameStatus && emailStatus && messageStatus
+            && nameError===''  && emailError==='' && messageError===''){
                 setDisabledButton(false);
         }
-    },[nameStatus, emailStatus, subjectStatus, messageStatus, nameError, emailError, subjectError, messageError])
+        else setDisabledButton(true);
+    },[nameStatus, emailStatus, messageStatus, nameError, emailError, messageError])
 
 
 
@@ -44,6 +40,7 @@ function Contact({skin, navToglerValue, lightDarkMode}) {
             setEmailError("Invalid Email. Try again!")
             if(e.target.value.length<1){                
                 setEmailError("Email field can't be empty!")
+                setEmailStatus(false)
             }
         } else{
             setEmailStatus(true)
@@ -54,33 +51,23 @@ function Contact({skin, navToglerValue, lightDarkMode}) {
     const nameHandler =(e)=>{
         setName(e.target.value);
         if(e.target.value.length<1){
-            setNameStatus(true)
+            setNameStatus(false)
             setNameError("Name field can't be empty")
         } else{
             setNameError('');
         }
     }
 
-    const subjectHandler = (e)=>{
-        setSubject(e.target.value);
-        if(e.target.value.length<1){
-            setSubjectStatus(true)
-            setSubjectError("Subject field can't be empty")
-        } else{
-            setSubjectError('');
-        }
-    }
-
-    const messageHandler =(e)=>{
+    const messageHandler =(e)=>{    
         setMessage(e.target.value);
         if(e.target.value.length<1){
-            setMessageStatus(true)
+            setMessageStatus(false)
             setMessageError("Message field can't be empty")
         } else{
-            setMessageError('');
+            setMessageError('');   
+            setMessageStatus(true)      
         }
     }
-
 
     const blurHandler = (e) =>{ 
         switch (e.target.name){
@@ -89,9 +76,6 @@ function Contact({skin, navToglerValue, lightDarkMode}) {
                 break
             case 'email':
                 setEmailStatus(true)
-                break
-            case 'subject':
-                setSubjectStatus(true)
                 break
             case 'message':
                 setMessageStatus(true)
