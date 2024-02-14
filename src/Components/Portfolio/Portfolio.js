@@ -8,6 +8,7 @@ import notification from '../../images/notification.png'
 import todo from '../../images/todo.png'
 import quiz from '../../images/quiz.png'
 import invitation from '../../images/invitation.png'
+import converter from '../../images/converter.png'
 
 
 const linkSourse = [
@@ -42,11 +43,15 @@ const linkSourse = [
         github:"https://github.com/MagenVadim/quiz",
         image:quiz
     },  
-    {
-     name: "Invitations",
-     url:"https://main.d3fw4jshofxvm1.amplifyapp.com/",
-     github:"https://github.com/MagenVadim/users-list",
-     image:invitation
+    {name: "Invitations",
+        url:"https://main.d3fw4jshofxvm1.amplifyapp.com/",
+        github:"https://github.com/MagenVadim/users-list",
+        image:invitation
+    },
+    {name: "Converter",
+        url:"https://main.dtza3aoq40taq.amplifyapp.com/",
+        github:"https://github.com/MagenVadim/converter",
+        image:converter
     }
 ]
 
