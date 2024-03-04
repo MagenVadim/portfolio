@@ -23,8 +23,7 @@ function Contact({skin, navToglerValue, lightDarkMode}) {
     const [messageError, setMessageError] = useState("Message field can't be empty!");
 
     useEffect(()=>{
-        if(nameStatus && emailStatus && messageStatus
-            && nameError===''  && emailError==='' && messageError===''){
+        if(nameError===''  && emailError==='' && messageError===''){
                 setDisabledButton(false);
         }
         else setDisabledButton(true);

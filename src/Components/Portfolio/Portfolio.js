@@ -5,7 +5,7 @@ import countries from '../../images/countriesAPI.jpg'
 import jobListing from '../../images/JobListing.png'
 import snickersStore from '../../images/snickersStore.jpg'
 import notification from '../../images/notification.png'
-import todo from '../../images/todo.png'
+import multistep from '../../images/multistep.png'
 import quiz from '../../images/quiz.png'
 import invitation from '../../images/invitation.png'
 import converter from '../../images/converter.png'
@@ -33,10 +33,10 @@ const linkSourse = [
         github:"https://github.com/MagenVadim/message-page",
         image:notification,
     },        
-    {name: "To-Do App",
-        url: "https://main.d1t4lt62kkmhda.amplifyapp.com/",
-        github:"https://github.com/MagenVadim/todo-list",
-        image:todo
+    {name: "Multi-Step-Form",
+        url: "https://main.d1q93wljjhxkgx.amplifyapp.com/",
+        github:"https://github.com/MagenVadim/multi-step-form",
+        image:multistep
     },
     {name: "Quiz",
         url: "https://main.d2rgrsz9qdmo4c.amplifyapp.com/",
